@@ -1,0 +1,14 @@
+{
+  "dependencies": {
+    "apollo-server-micro": "^2.9.4",
+    "graphql": "^14.5.8",
+    "micro": "^9.3.4",
+    "next": "^9.0.7",
+    "react": "^16.10.1",
+    "react-dom": "^16.10.1"
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.3",
+    "typescript": "^3.6.3"
+  }
+}
