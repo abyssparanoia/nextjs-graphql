@@ -1,4 +1,7 @@
 {
+  "name": "nextjs-graphql",
+  "version": "1.0.0",
+  "license": "MIT",
   "dependencies": {
     "apollo-server-micro": "^2.9.4",
     "graphql": "^14.5.8",
