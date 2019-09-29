@@ -4,12 +4,29 @@ import { ApolloServer, gql } from "apollo-server-micro";
 const typeDefs = gql`
   type Query {
     hello: String
+    users: [User]
+  }
+  type User {
+    id: Int!
+    name: String!
   }
 `;
 
+const users = [
+  {
+    id: 1,
+    name: "tarou"
+  },
+  {
+    id: 2,
+    name: "zirou"
+  }
+];
+
 const resolvers = {
   Query: {
-    hello: () => "world"
+    hello: () => "world",
+    users: () => users
   }
 };
 

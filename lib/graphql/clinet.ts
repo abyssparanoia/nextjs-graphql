@@ -18,7 +18,7 @@ const createApolloClient = (initialState: NormalizedCacheObject) => {
     connectToDevTools: process.browser,
     ssrMode: !process.browser,
     link: new HttpLink({
-      uri: "/api",
+      uri: "http://localhost:3000/api",
       credentials: "same-origin"
     }),
     cache: new InMemoryCache().restore(initialState)
