@@ -1,22 +1,12 @@
 import React from "react";
-import gql from "graphql-tag";
-import { useQuery } from "react-apollo-hooks";
-
-const GET_USERS = gql`
-  query {
-    users {
-      id
-      name
-    }
-  }
-`;
+import { useUsersQuery } from "../lib/graphql/graphql-client-api";
 
 export default function Users() {
-  const { loading, data } = useQuery(GET_USERS);
+  const { loading, data } = useUsersQuery();
 
   return (
     <div>
-      {!loading && (
+      {!loading && data && data.users && (
         <ul>
           {data.users.map((u: { id: string; name: string }) => {
             return <li key={u.id}>{u.name}</li>;
