@@ -25,7 +25,7 @@ const createApolloClient = (initialState: NormalizedCacheObject) => {
   });
 };
 
-export const initApollo = (initialState: any = {}) => {
+export const initApolloClient = (initialState: any = {}) => {
   if (!process.browser) {
     return createApolloClient(initialState);
   }
@@ -37,3 +37,5 @@ export const initApollo = (initialState: any = {}) => {
 
   return apolloClient;
 };
+
+export default initApolloClient;
