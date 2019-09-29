@@ -17,6 +17,9 @@
     "@graphql-codegen/cli": "^1.7.0",
     "@graphql-codegen/introspection": "^1.7.0",
     "@graphql-codegen/typescript": "^1.7.0",
+    "@graphql-codegen/typescript-operations": "^1.7.0",
+    "@graphql-codegen/typescript-react-apollo": "^1.7.0",
+    "@graphql-codegen/typescript-resolvers": "^1.7.0",
     "@types/react": "^16.9.3",
     "@types/react-dom": "^16.9.1",
     "typescript": "^3.6.3"
@@ -27,6 +30,7 @@
     "build": "next build && tsc -p ./server",
     "start": "next start",
     "lint": "eslint --fix -c ./.eslintrc.js './**/*.{ts,tsx}'",
-    "storybook": "start-storybook"
+    "storybook": "start-storybook",
+    "codegen": "graphql-codegen --config codegen.yml"
   }
 }
