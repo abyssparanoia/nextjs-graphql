@@ -10,5 +10,13 @@
   "devDependencies": {
     "@types/react": "^16.9.3",
     "typescript": "^3.6.3"
+  },
+  "scripts": {
+    "start:dev": "next",
+    "start:prd": "NODE_ENV=production node ./dist/server/main.js",
+    "build": "next build && tsc -p ./server",
+    "start": "next start",
+    "lint": "eslint --fix -c ./.eslintrc.js './**/*.{ts,tsx}'",
+    "storybook": "start-storybook"
   }
 }
