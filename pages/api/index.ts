@@ -7,8 +7,10 @@ import {
 import fs from "fs";
 import path from "path";
 
+const dirPath = path.dirname(process.argv[1]);
+
 const typeDefs = fs
-  .readFileSync(path.join(__dirname, "../../lib/graphql/schema.graphql"))
+  .readFileSync(path.join(dirPath, "../../lib/graphql/schema.graphql"))
   .toString();
 
 interface User {
